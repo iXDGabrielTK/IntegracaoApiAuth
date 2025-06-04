@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 id="mensagem">Carregando...</h1>
+</div>
+
+<script>
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  if (usuario) {
+    const mensagem = `Seja bem-vindo(a), ${usuario.email}! Seu token expira em ${usuario.expira}`;
+    document.getElementById('mensagem').textContent = mensagem;
+  } else {
+    document.getElementById('mensagem').textContent = 'Usuário não autenticado.';
+  }
+</script>
+</body>
+</html>
