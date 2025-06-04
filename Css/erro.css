@@ -1,0 +1,23 @@
+/* erro.css */
+body {
+    background-color: #f2dede;
+    color: #a94442;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #a94442;
+    text-decoration: underline;
+}
