@@ -47,7 +47,9 @@ IntegracaoApiAuth/
 
 ## 🌐 Hospedagem
 
-- O projeto está pronto para ser publicado na [Vercel](https://vercel.com) ou similar.
+- O projeto está publicado e acessível online via Vercel:  
+  👉 [https://integracao-api-auth.vercel.app](https://integracao-api-auth.vercel.app)
+
 - A API de autenticação está publicada e acessível via:  
   👉 [https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/swagger/index.html](https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/swagger/index.html)
 
