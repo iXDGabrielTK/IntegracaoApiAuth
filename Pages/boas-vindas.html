@@ -4,13 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
-    <link rel="stylesheet" href="../Css/boas-vindas.css">
+    <link rel="stylesheet" href="../Css/styles.css">
+    <script src="https://kit.fontawesome.com/2ca71d1b50.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
-    <h1 id="mensagem">Carregando...</h1>
-    <button onclick="logout()">Sair</button>
+    <div class="content first-content">
+      <div class="first-colunm">
+        <h2 class="title title-primary">Área do Usuário</h2>
+        <p class="description description-primary">Obrigado por utilizar nosso sistema</p>
+        <p class="description description-primary">Você está conectado com sucesso</p>
+        <button onclick="logout()" class="button button-primary">Sair</button>
+      </div>
+      <div class="second-colunm">
+        <h2 class="title title-second">Bem-vindo</h2>
+        <div class="social-midia">
+          <ul class="list-social-midia">
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-facebook-f"></i>
+              </li>
+            </a>
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-google"></i>
+              </li>
+            </a>
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-linkedin-in"></i>
+              </li>
+            </a>
+          </ul>
+        </div>
+        <p class="description description-second">Informações da sua conta:</p>
+        <div class="form">
+          <h3 id="mensagem" class="description description-second" style="margin: 20px 0;">Carregando...</h3>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>

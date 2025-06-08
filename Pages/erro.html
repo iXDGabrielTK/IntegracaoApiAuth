@@ -2,12 +2,48 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erro</title>
-    <link rel="stylesheet" href="../Css/erro.css">
+    <link rel="stylesheet" href="../Css/styles.css">
+    <script src="https://kit.fontawesome.com/2ca71d1b50.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Erro de Autenticação</h1>
-    <p>Você não está autenticado ou o token expirou.</p>
-    <a href="../index.html">Voltar para o Login</a>
+  <div class="container">
+    <div class="content first-content">
+      <div class="first-colunm">
+        <h2 class="title title-primary" style="font-size: 2em; color: #e74c3c;">Erro de Autenticação</h2>
+        <p class="description description-primary">Você não está autenticado</p>
+        <p class="description description-primary">ou o token expirou</p>
+        <button onclick="window.location.href='../index.html'" class="button button-primary">Voltar para o Login</button>
+      </div>
+      <div class="second-colunm">
+        <h2 class="title title-second" style="font-size: 2em; color: #e74c3c;">Acesso Negado</h2>
+        <div class="social-midia">
+          <ul class="list-social-midia">
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-facebook-f"></i>
+              </li>
+            </a>
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-google"></i>
+              </li>
+            </a>
+            <a href="#" class="link-social-midia">
+              <li class="item-social-midia">
+                <i class="fab fa-linkedin-in"></i>
+              </li>
+            </a>
+          </ul>
+        </div>
+        <p class="description description-second">Para acessar o sistema:</p>
+        <div class="form">
+          <h3 class="description description-second" style="margin: 20px 0;">Faça login com suas credenciais</h3>
+          <i class="fas fa-exclamation-triangle" style="font-size: 3em; color: #e74c3c; margin: 20px 0;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
