@@ -1,74 +1,80 @@
-# 📃 Projeto: Integração Front-End com API de Autenticação - UMFG
+# 🔐 Projeto: Integração Front-End com API de Autenticação - UMFG
 
-## 🌟 Objetivo
+## 📌 Descrição
 
-Este projeto tem como finalidade integrar a interface front-end fornecida com a API de autenticação da UMFG. A proposta é permitir que usuários se cadastrem, realizem login e visualizem uma tela de boas-vindas após a autenticação.
+Este projeto consiste em uma aplicação web de autenticação que integra um front-end moderno e responsivo com a API de autenticação da UMFG. Os usuários podem realizar cadastro, login e acessar uma área autenticada, com controle de sessão por token JWT. A aplicação oferece feedback visual amigável, animações modernas, validações rigorosas e uma interface elegante e responsiva.
 
-## 🔗 Recursos Utilizados
+## 🚀 Funcionalidades Implementadas
 
-- Projeto base com tela de login (HTML + CSS + JS)
-- API documentada via Swagger: [UMFG Auth API Swagger](https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/swagger/index.html)
-- Plataforma de hospedagem (ex: Vercel para o front-end)
+- 🔗 **Integração com a API**: Comunicação via `fetch` com os endpoints `/Autenticacao/registar` e `/Autenticacao/autenticar`.
+- ✅ **Validações completas**:
+  - Validação de e-mail.
+  - Verificação de senhas coincidentes.
+  - Requisitos de complexidade de senha (mínimo 1 letra maiúscula e 1 número).
+- 🛡️ **Tratamento de Erros**:
+  - Mensagens claras para status `400`, `401`, `409`, `500` etc.
+  - Toasts configurados para ignorar erros genéricos inesperados e focar em mensagens relevantes ao usuário.
+- 🎨 **Design customizado e responsivo**:
+  - Interface moderna com suporte a modo escuro.
+  - Animações entre login e cadastro.
+  - Layout adaptado para dispositivos móveis e telas grandes.
+- 🔐 **Armazenamento seguro de sessão**:
+  - Salvamento de token e data de expiração em `localStorage`.
+  - Tela de boas-vindas personalizada com os dados do usuário autenticado.
+- 👁️ **Melhorias na experiência do usuário**:
+  - Ícones de exibir/ocultar senha nos campos `password`.
+  - Botões com feedback visual de carregamento.
+  - Mensagens de toast automáticas com exibição temporizada.
 
-## ✅ Tarefas
+## 🧩 Estrutura do Projeto
 
-### 1. Integração com a API
+```
+IntegracaoApiAuth/
+├── Css/
+│   ├── boas-vindas.css         # Estilos da tela de boas-vindas (incorporado ao styles.css)
+│   ├── styles.css              # Estilos globais e responsivos
+├── Js/
+│   ├── auth.js                 # Comunicação com API
+│   ├── login.js                # Animações de transição
+│   ├── main.js                 # Lógica de login/cadastro
+│   └── utils.js                # Validações e mensagens
+├── Pages/
+│   ├── boas-vindas.html        # Tela pós-login
+│   └── erro.html               # Tela de erro (token ausente ou expirado)
+├── index.html                  # Tela principal com formulários de login e cadastro
+├── README.md                   # Documentação do projeto
+```
 
-- Utilizar os endpoints da API para cadastro e autenticação de usuários.
-- Tratar corretamente os status HTTP de erro e sucesso conforme documentação do Swagger.
-- Exibir mensagens amigáveis ao usuário.
+## 🌐 Hospedagem
 
-### 2. Formulário de Cadastro
+- O projeto está pronto para ser publicado na [Vercel](https://vercel.com) ou similar.
+- A API de autenticação está publicada e acessível via:  
+  👉 [https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/swagger/index.html](https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/swagger/index.html)
 
-- Campos obrigatórios:
+## 📸 Demonstração
 
-  - 📧 E-mail
-  - 🔑 Senha
-  - 🔒 Confirmação de Senha
+> ✅ Cadastro, login, exibição de toast, animações, redirecionamento para tela de boas-vindas, e logout funcionando de ponta a ponta.
 
-- Validar se as senhas coincidem antes de enviar.
-- Exibir mensagens como "Usuário já cadastrado!"
+## 📦 Como Executar
 
-### 3. Tela de Login
+1. Clone este repositório
+2. Abra `index.html` em um navegador moderno
+3. Teste os fluxos de cadastro e login com a API já hospedada
 
-- Campos obrigatórios:
+## 🧠 Regras e Boas Práticas
 
-  - 📧 E-mail
-  - 🔑 Senha
+- Repositório deve permanecer público
+- Commits frequentes e descritivos são recomendados
+- Evite anexos `.zip`
+- Códigos copiados resultam em **nota zero**
 
-- Tratar mensagens de erro (ex: "usuário ou senha inválida").
-- Armazenar o token JWT de forma segura.
+## 🎁 Bônus
 
-### 4. Tela de Boas-Vindas
-
-- Após login ou cadastro, redirecionar para uma tela com a mensagem:
-
-  > "Seja bem-vindo(a), email_do_usuario_autenticado! Seu token expira data_expiracao_do_token"
-
-- Criar uma interface amigável e responsiva.
-
-### 5. Customização
-
-- Aplicar estilo visual próprio, sem comprometer a usabilidade.
-- Pode alterar cores, fontes, animações etc.
-
-## 📦 Entrega
-
-- Projeto deve estar versionado em um repositório **público** no **GitHub**.
-- Envie **somente o link do repositório**.
-
-## ⚠️ Regras Importantes
-
-- Envio de `.zip` ou anexo de código = **nota zero**
-- Plágio de código = **nota zero** para todos os envolvidos
-- Mantenha commits frequentes e descritivos
-
-## 🏰 Bônus
-
-- +1 ponto extra para quem disponibilizar o front-end funcionando na nuvem (ex: Vercel), integrado com a API
+- +1 ponto extra para projeto funcionando e publicado na nuvem
 
 ---
 
-## 😊 Dúvidas?
+### 🤝 Desenvolvido por:
 
-Entre em contato com o responsável da atividade. Bom desenvolvimento!
+Gabriel Ferrari  
+Este projeto foi desenvolvido com foco em experiência do usuário, segurança básica e integração com API real de autenticação.
